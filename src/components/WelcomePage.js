@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './WelcomePage.css';
+import widget from './widget';
 
 const WelcomePage = () => {
     const [checked, setChecked] = useState(false);
@@ -22,8 +23,8 @@ const WelcomePage = () => {
                 <input type="checkbox" onChange={handleCheck} />
                 <span>
                     By entering, you agree to our{' '}
-                    <a href="https://example.com/terms">terms</a> and{' '}
-                    <a href="https://example.com/conditions">conditions</a>.
+                    <a href="https://example.com/terms">terms of use</a> and{' '}
+                    <a href="https://example.com/conditions">privacy policy</a>.
                 </span>
             </div>
             <button onClick={handleSubmit} disabled={!checked}>

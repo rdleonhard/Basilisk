@@ -1,15 +1,17 @@
+// App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
-import './App.css';
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <WelcomePage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        {/* Add other routes here as needed */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
